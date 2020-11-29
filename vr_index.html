@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, World! - A-Frame</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@^3.2.x/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+    <script>
+    AFRAME.registerComponent('hide-on-click', {
+        dependencies: ['raycaster'],
+        schema: {
+            target:{type: 'selector'}
+        },
+        init: function () {
+            var data = this.data;
+            var el = this.el;
+            el.addEventListener('click', function () {
+                el.setAttribute('visible', false);
+                data.target.setAttribute('visible', true);
+            });
+        }
+    });
+    </script>
+  </head>
+  
+  <body>
+    <a-scene>
+      <a-box position="1 0.8 -1.75" rotation="0 25 0" depth="0.1" color="#505050"></a-box>
+      <!--a-sphere position="0 1.25 -5" radius="1" color="#2F2D2E"></a-sphere-->
+      <!--a-ring position="-0.75 1.5 -5" radius="0.07" color="black"></a-ring-->
+      <!--a-ring position="0.75 1.5 -5" radius="0.07" color="black"></a-ring-->
+      <!--a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder-->
+      <a-box position="0 0 -2" rotation="0 5 0" width="8" height="0.2" depth="1" src="./purty_wood.png"></a-box>
+      <a-box position="1 0.2 -1.75" rotation="0 5 0" width="0.35" height="0.1" depth="0.2" color="#707070"></a-box>
+      <a-cylinder position="1 0.3 -1.75" radius="0.1" height="0.2" color="#707070"></a-cylinder>
+      <a-sky src="./sky.jpg"></a-sky>
+    </a-scene>
+  </body>
+</html>
