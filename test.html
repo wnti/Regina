@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>A Land Far Away</title>
+    <meta name="description" content="Project 1">
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+</head>
+<body>
+<a-scene background="color: #30d9ff">
+    <a-plane position="-2.18018 -0.04 -4.01" rotation="-90 0 0" width="7.5" scale= "3.600 5.090 1.000" height="6" color="#00b017" shadow="" material="" geometry=""></a-plane>
+    <a-assets>
+        <a-asset-item id="Grass-obj" src="https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FGrass.obj?v=1601334119645"></a-asset-item>
+        <a-asset-item id="Grass-mtl" src="https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FGrass.mtl?v=1601334031630"></a-asset-item>
+        <a-asset-item id="Tree 2-obj" src="https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.obj?v=1602217623793"></a-asset-item>
+        <a-asset-item id="Tree 2-mtl" src="https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.mtl?v=1602217624498"></a-asset-item>
+        <a-asset-item id="Flowers-1-obj" src="https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FFlowers-1.obj?v=1602360998631"></a-asset-item>
+        <a-asset-item id="Flowers-1-mtl" src="https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FFlowers-1.mtl?v=1602360934921"></a-asset-item>
+        <a-asset-item id="Butterfly-1-obj" src="https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-1.obj?v=1602371986360"></a-asset-item>
+        <a-asset-item id="Butterfly-1-mtl" src="https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-1.mtl?v=1602372402143"></a-asset-item>
+        <a-asset-item id="Butterfly-2-obj" src="https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-2.obj?v=1602370324735"></a-asset-item>
+        <a-asset-item id="Butterfly-2-mtl" src="https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-2.mtl?v=1602370271290"></a-asset-item>
+        <a-asset-item id="Butterfly-3-obj" src="https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-3.obj?v=1602371009912"></a-asset-item>
+        <a-asset-item id="Butterfly-3-mtl" src="https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-3.mtl?v=1602370988621"></a-asset-item>
+        <a-asset-item id="Butterfly-4-obj" src="https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-4.obj?v=1602373133727"></a-asset-item>
+        <a-asset-item id="Butterfly-4-mtl" src="https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-4.mtl?v=1602373121981"></a-asset-item>
+        <a-asset-item id="Butterfly-5-obj" src="https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-5.obj?v=1602375171069"></a-asset-item>
+        <a-asset-item id="Butterfly-5-mtl" src="https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-5.mtl?v=1602375176500"></a-asset-item>
+        <a-asset-item id="Butterfly-6-obj" src="https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-6.obj?v=1602376574006"></a-asset-item>
+        <a-asset-item id="Butterfly-6-mtl" src="https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-6.mtl?v=1602376583698"></a-asset-item>
+        <a-asset-item id="Butterfly-7-obj" src="https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-7.obj?v=1602376810501"></a-asset-item>
+        <a-asset-item id="Butterfly-7-mtl" src="https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-7.mtl?v=1602376823689"></a-asset-item>
+        <a-asset-item id="Butterfly-8-obj" src="https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-8.obj?v=1602377524336"></a-asset-item>
+        <a-asset-item id="Butterfly-8-mtl" src="https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-8.mtl?v=1602377519169"></a-asset-item>
+    </a-assets>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FGrass.obj?v=1601334119645; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FGrass.mtl?v=1601334031630" scale="1.647 0.500 0.889" position="12.830 0.107 -6.870"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FGrass.obj?v=1601334119645; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FGrass.mtl?v=1601334031630" scale="2.512 0.500 1.376" position="11.560 0.107 -6.87"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FGrass.obj?v=1601334119645; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FGrass.mtl?v=1601334031630" scale="1.000 1.000 1.000" position="3.700 0.107 -6.870"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.obj?v=1602217623793; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.mtl?v=1602217624498" scale="1.742 1.775 1.775" rotation="" position="-52.35446 -3.48883 -6.42971"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.obj?v=1602217623793; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.mtl?v=1602217624498" scale="1.742 1.775 1.775" rotation="" position="-45 -2.96864 -16.18727"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.obj?v=1602217623793; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.mtl?v=1602217624498" scale="1.742 1.775 1.775" rotation="" position="-35 -2.0627 -22.54542"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.obj?v=1602217623793; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.mtl?v=1602217624498" scale="1.742 1.775 1.775" rotation="" position="-25.62865 -0.89301 -27.10056"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.obj?v=1602217623793; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.mtl?v=1602217624498" scale="1.742 1.775 1.775" rotation="" position="-15.707 -0.349 -29.72334"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.obj?v=1602217623793; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.mtl?v=1602217624498" scale="1.742 1.775 1.775" rotation="" position="-4.27534 -0.349 -29.72334"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.obj?v=1602217623793; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.mtl?v=1602217624498" scale="1.742 1.775 1.775" rotation="" position="6.2153 -0.349 -29.72334"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.obj?v=1602217623793; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.mtl?v=1602217624498" scale="1.742 1.775 1.775" rotation="" position="17.91466 -0.53857 -29.093"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.obj?v=1602217623793; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.mtl?v=1602217624498" scale="1.742 1.775 1.775" rotation="" position="27 -1.58781 -22.03766"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.obj?v=1602217623793; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.mtl?v=1602217624498" scale="1.742 1.775 1.775" rotation="" position="35.62283 -3.09653 -13.94024"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.obj?v=1602217623793; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FTree%202.mtl?v=1602217624498" scale="1.742 1.775 1.775" rotation="" position="40.94917 -3.68256 -1.32453"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FFlowers-1.obj?v=1602360998631; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FFlowers-1.mtl?v=1602360934921" scale="0.68394 1 1" position="-1.32616 0.10142 5.46318"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FFlowers-1.obj?v=1602360998631; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FFlowers-1.mtl?v=1602360934921" scale="0.68394 1 1" position="-1.32616 0.10142 3.17398"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FFlowers-1.obj?v=1602360998631; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FFlowers-1.mtl?v=1602360934921" scale="0.68394 1 1" position="-1.32616 0.10142 1.28175"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FFlowers-1.obj?v=1602360998631; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FFlowers-1.mtl?v=1602360934921" scale="0.68394 1 1" position="-1.32616 0.10142 -0.23538"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-1.obj?v=1602371986360; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-1.mtl?v=1602372402143" position="-23.68135 65.75751 -9.01391"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-2.obj?v=1602370324735; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-2.mtl?v=1602370271290" scale="0.5 1 0.57205" "="" 0.5"="" rotation="-29.526807014271846 -43.33566283471981 25.173473686867847" position="5.16887 30.7638 -17.91124"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-3.obj?v=1602371009912; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-3.mtl?v=1602370988621" scale="0.5 1 0.57205" "="" 0.5"="" rotation="-25.397500184764002 -89.41751238150167 120.96743337038043" position="2.40872 28.61251 26.99685"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-4.obj?v=1602373133727; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-4.mtl?v=1602373121981" scale="0.5 1 0.57205" "="" 0.5"="" rotation="-16.890222842661537 -139.92603385346425 39.756395488537564" position="22.15229 29.27945 7.16543"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-5.obj?v=1602375171069; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-5.mtl?v=1602375176500" scale="0.5 1 0.57205" "="" 0.5"="" rotation="-15.733994012087537 149.1168498451578 67.49729305538663" position="15.76442 14.22731 17.95897"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-6.obj?v=1602376574006; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-6.mtl?v=1602376583698" scale="0.5 1 0.57205" "="" 0.5"="" rotation="-15.733994012087537 100.97693589826602 67.49729305538663" position="-8.10302 15.51778 39.92231"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-7.obj?v=1602376810501; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-7.mtl?v=1602376823689" scale="0.5 1 0.57205" "="" 0.5"="" rotation="23.36292705425445 68.58362103495466 96.03689378864807" position="-31.86898 28.14097 39.89589"></a-entity>
+    <a-entity obj-model="obj: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-8.obj?v=1602377524336; mtl: https://cdn.glitch.com/1c6c16e0-250c-41b3-b687-c694fbfaf40d%2FButterfly-8.mtl?v=1602377519169" scale="0.5 1 0.57205" "="" 0.5"="" rotation="32.25064837232378 44.29536714156394 102.70039294601953" position="-34.71328 44.13291 18.74192"></a-entity>
+</a-scene>
+</body>
+</html>
