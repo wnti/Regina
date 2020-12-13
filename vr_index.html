@@ -7,40 +7,8 @@
     <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-animation-component@^3.2.x/dist/aframe-animation-component.min.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>
-    <script>
-        AFRAME.registerComponent('hide-on-click', {
-            dependencies: ['raycaster'],
-            schema: {
-                target: {type: 'selector'}
-            },
-            init: function () {
-                var data = this.data;
-                var el = this.el;
-                el.addEventListener('click', function () {
-                    el.setAttribute('visible', false);
-                    data.target.setAttribute('visible', true);
-                });
-            }
-        });
-    </script>
-    <script>
-        AFRAME.registerComponent('change-color-on-hover', {
-            schema: {
-                color: {default: 'red'}
-            },
-            init: function () {
-                var data = this.data;
-                var el = this.el;  // <a-box>
-                var defaultColor = el.getAttribute('material').color;
-                el.addEventListener('mouseenter', function () {
-                    el.setAttribute('color', data.color);
-                });
-                el.addEventListener('mouseleave', function () {
-                    el.setAttribute('color', defaultColor);
-                });
-            }
-        });
-    </script>
+    <script src="https://unpkg.com/aframe-html-shader@0.5.0/dist/aframe-html-shader.min.js"></script>
+
 </head>
 
 <body>
@@ -69,10 +37,24 @@
                 });
             }
         });
+        AFRAME.registerComponent('scale-on-mouseleave', {
+            schema: {
+                to: {default: '2.5 2.5 2.5'}
+            },
+            init: function () {
+                var data = this.data;
+                this.el.addEventListener('mouseleave', function () {
+                    this.setAttribute('scale', data.to);
+                });
+            }
+        });
+
     </script>
-    <a-entity gltf-model="#male" position="0 0 -3.5" scale="3 3 3" scale-on-mouseenter="to: 2.2 2.2 2.2"></a-entity>
-    <a-entity gltf-model="./models/speech_bubble/scene.gltf" position="0.95907 5.96954 -4.39464"
-              scale="0.32 0.00001 0.2" rotation="-90 90 90"></a-entity>
+    <a-entity gltf-model="#male" position="0 0 -3.5" scale="3 3 3"></a-entity>
+    <a-entity gltf-model="#bubble" position="0.95907 5.96954 -4.39464"
+              scale="0.32 0 0.2" rotation="-90 90 90" scale-on-mouseenter="to: 0.33 0 0.21" scale-on-mouseleave="to: 0.32 0 0.2"></a-entity>
+
+    <a-entity geometry="primitive: box" material="shader: html; target: #htmlElement"></a-entity>
 
 
     <a-box position="1 0.8 -1.75" rotation="0 25 0" depth="0.1" color="#505050"></a-box>
@@ -99,8 +81,9 @@
                   material="color: black; shader: flat"
                   raycaster="far:20; interval: 1000; objects: .clickable"></a-entity>
     </a-camera>
-
-
 </a-scene>
+<div style="width: 100%; height: 100%; position: fixed; left: 0; top: 0; z-index: -1; overflow: hidden">
+    <div id="htmlElement" style="background: #F8F8F8; color: #333; font-size: 48px">你好! 有会员吗</div>
+</div>
 </body>
 </html>
