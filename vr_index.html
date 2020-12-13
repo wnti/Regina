@@ -51,16 +51,29 @@
         <a-asset-item id="male" src="./models/alexey/scene.gltf"></a-asset-item>
         <img id="wood" src="./images/purty_wood.png"></img>
     </a-assets>
-
-    <a-entity gltf-model="#male" position="0 0 -3.5" scale="3 3 3"></a-entity>
-    <a-entity gltf-model="./models/speech_bubble/scene.gltf" position="0.95907 5.96954 -4.39464"
-              scale="0.32 0.00001 0.2" rotation="-90 90 90"></a-entity>
     <script>
         var boxEl = document.querySelector('a-box');
         boxEl.addEventListener('mouseenter', function () {
             boxEl.setAttribute('scale', {x: 2, y: 2, z: 2});
         });
     </script>
+    <script>
+        AFRAME.registerComponent('scale-on-mouseenter', {
+            schema: {
+                to: {default: '2.5 2.5 2.5'}
+            },
+            init: function () {
+                var data = this.data;
+                this.el.addEventListener('mouseenter', function () {
+                    this.setAttribute('scale', data.to);
+                });
+            }
+        });
+    </script>
+    <a-entity gltf-model="#male" position="0 0 -3.5" scale="3 3 3" scale-on-mouseenter="to: 2.2 2.2 2.2"></a-entity>
+    <a-entity gltf-model="./models/speech_bubble/scene.gltf" position="0.95907 5.96954 -4.39464"
+              scale="0.32 0.00001 0.2" rotation="-90 90 90"></a-entity>
+
 
     <a-box position="1 0.8 -1.75" rotation="0 25 0" depth="0.1" color="#505050"></a-box>
     <!--a-sphere position="0 1.25 -5" radius="1" color="#2F2D2E"></a-sphere-->
@@ -87,12 +100,7 @@
                   raycaster="far:20; interval: 1000; objects: .clickable"></a-entity>
     </a-camera>
 
-    <script>
-        var boxEl = document.querySelector('a-box');
-        boxEl.addEventListener('mouseenter', function () {
-            boxEl.setAttribute('scale', {x: 2, y: 2, z: 2});
-        });
-    </script>
+
 </a-scene>
 </body>
 </html>
